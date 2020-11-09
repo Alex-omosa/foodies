@@ -5,7 +5,7 @@ function Home() {
   return (
     <div>
       HOME
-      <Link to="/user">Users</Link>
+      <Link to="/user/auth">Users</Link>
     </div>
   );
 }
