@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link as RouterLink, useRouteMatch } from 'react-router-dom';
+import { Link as RouterLink } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import FormGroup from '@material-ui/core/FormGroup';
@@ -26,7 +26,6 @@ const useStyles = makeStyles((theme) => ({
 
 function LoginForm() {
   const classes = useStyles();
-  let match = useRouteMatch();
 
   return (
     <FormGroup className={classes.formGroup}>
@@ -34,7 +33,7 @@ function LoginForm() {
       <TextField id="password" label="Password" color="secondary" />
       <Link
         component={RouterLink}
-        to={`${match.url}/reset`}
+        to="/user/auth/reset_password"
         className={classes.forgotPasswordLink}
         underline="none"
       >

@@ -5,13 +5,15 @@ import AuthContainer from './AuthContainer';
 function AuthRoutes() {
   const match = useRouteMatch();
   return (
-    <Switch>
-      <Route path={`${match.path}/auth`} component={AuthContainer} />
-      <Route
-        path={`${match.path}/reset_password`}
-        component={ResetPasswordContainer}
-      />
-    </Switch>
+    <Route path={`${match.path}/`}>
+      <Switch>
+        <Route
+          path={`${match.path}/auth/reset_password`}
+          component={ResetPasswordContainer}
+        />
+        <Route path={`${match.path}/auth`} component={AuthContainer} />
+      </Switch>
+    </Route>
   );
 }
 export default AuthRoutes;
