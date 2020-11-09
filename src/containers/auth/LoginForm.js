@@ -15,6 +15,7 @@ const useStyles = makeStyles((theme) => ({
     marginTop: '60%',
     borderRadius: 30,
     height: 70,
+    width: '100%',
   },
   forgotPasswordLink: {
     marginTop: 30,
@@ -32,7 +33,6 @@ function LoginForm() {
       </Link>
       <Button
         className={classes.formButton}
-        fullWidth={true}
         variant="contained"
         color="primary"
       >

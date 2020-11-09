@@ -9,6 +9,7 @@ const useStyles = makeStyles((theme) => ({
     marginTop: '60%',
     borderRadius: 30,
     height: 70,
+    width: '100%',
   },
   formGroup: {
     minWidth: '70%',
@@ -30,7 +31,6 @@ function SignUpForm() {
       />
       <Button
         className={classes.formButton}
-        fullWidth={true}
         variant="contained"
         color="primary"
       >

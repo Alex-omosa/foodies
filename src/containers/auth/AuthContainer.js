@@ -8,7 +8,7 @@ import {
 } from 'react-router-dom';
 
 import { makeStyles } from '@material-ui/core/styles';
-import ButtonGroup from '@material-ui/core/ButtonGroup';
+// import ButtonGroup from '@material-ui/core/ButtonGroup';
 import Button from '@material-ui/core/Button';
 import Container from '@material-ui/core/Container';
 import Paper from '@material-ui/core/Paper';
@@ -81,22 +81,15 @@ function AuthContainer() {
             <img className={classes.img} src={logo} alt="logo" />
           </Button>
 
-          <ButtonGroup
-            className={classes.authNav}
-            disableElevation
-            variant="outlined"
-            color="primary"
-            component="nav"
-            aria-label="login or sign up"
-          >
+          <div className={classes.authNav}>
             <RouterLink className={classes.link} to={`${match.url}/login`}>
-              <Button fullWidth={true}>Login </Button>
+              <Button className={classes.navBtn}>Login </Button>
             </RouterLink>
 
             <RouterLink className={classes.link} to={`${match.url}/sign-up`}>
-              <Button fullWidth={true}>Sign up </Button>
+              <Button className={classes.navBtn}>Sign up </Button>
             </RouterLink>
-          </ButtonGroup>
+          </div>
         </Container>
       </Paper>
       <div className={classes.formsContainer}>
