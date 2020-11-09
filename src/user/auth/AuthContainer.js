@@ -4,18 +4,16 @@ import {
   useRouteMatch,
   Switch,
   Route,
-  useHistory,
 } from 'react-router-dom';
 
 import { makeStyles } from '@material-ui/core/styles';
-// import ButtonGroup from '@material-ui/core/ButtonGroup';
 import Button from '@material-ui/core/Button';
 import Container from '@material-ui/core/Container';
 import Paper from '@material-ui/core/Paper';
 import Link from '@material-ui/core/Link';
 import logo from './../../images/logo.svg';
-import LoginForm from './LoginForm';
-import SignUpForm from './SignUpForm';
+import LoginForm from './forms/LoginForm';
+import SignUpForm from './forms/SignUpForm';
 
 const useStyles = makeStyles((theme) => ({
   authContainer: {
@@ -54,6 +52,13 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'space-around',
     width: '100%',
   },
+  imgLink: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignContent: 'center',
+    width: 'auto',
+    height: 'auto',
+  },
   formsContainer: {
     minHeight: '60vh',
     minWidth: '100vw',
@@ -68,18 +73,14 @@ const useStyles = makeStyles((theme) => ({
 function AuthContainer() {
   let match = useRouteMatch();
   const classes = useStyles();
-  let history = useHistory();
 
-  function handleClick() {
-    history.push('/');
-  }
   return (
     <div className={classes.authContainer}>
       <Paper className={classes.authHero}>
         <Container className={classes.cont}>
-          <Button component={Link} onClick={handleClick}>
+          <Link className={classes.imgLink} to="/">
             <img className={classes.img} src={logo} alt="logo" />
-          </Button>
+          </Link>
 
           <div className={classes.authNav}>
             <RouterLink className={classes.link} to={`${match.url}/login`}>

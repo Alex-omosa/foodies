@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link as RouterLink, useRouteMatch } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import FormGroup from '@material-ui/core/FormGroup';
@@ -9,10 +10,11 @@ const useStyles = makeStyles((theme) => ({
   formGroup: {
     minWidth: '70%',
     height: '100%',
+    padding: 10,
     minHeight: '100%',
   },
   formButton: {
-    marginTop: '60%',
+    marginTop: '40%',
     borderRadius: 30,
     height: 70,
     width: '100%',
@@ -24,11 +26,18 @@ const useStyles = makeStyles((theme) => ({
 
 function LoginForm() {
   const classes = useStyles();
+  let match = useRouteMatch();
+
   return (
     <FormGroup className={classes.formGroup}>
       <TextField id="email-address" label="Email Address" color="secondary" />
       <TextField id="password" label="Password" color="secondary" />
-      <Link className={classes.forgotPasswordLink} underline="none">
+      <Link
+        component={RouterLink}
+        to={`${match.url}/reset`}
+        className={classes.forgotPasswordLink}
+        underline="none"
+      >
         Forgot password?
       </Link>
       <Button

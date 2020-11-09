@@ -6,7 +6,7 @@ import Button from '@material-ui/core/Button';
 
 const useStyles = makeStyles((theme) => ({
   formButton: {
-    marginTop: '60%',
+    marginTop: '40%',
     borderRadius: 30,
     height: 70,
     width: '100%',
@@ -14,6 +14,7 @@ const useStyles = makeStyles((theme) => ({
   formGroup: {
     minWidth: '70%',
     height: '100%',
+    padding: 10,
     minHeight: '100%',
   },
 }));

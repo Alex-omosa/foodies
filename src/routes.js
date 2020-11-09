@@ -1,11 +1,11 @@
 import { Switch, Route } from 'react-router-dom';
-import AuthContainer from './containers/auth/AuthContainer';
+import User from './user/User';
 import Home from './containers/home/Home';
 
 function Routes() {
   return (
     <Switch>
-      <Route path="/auth" component={AuthContainer} />
+      <Route path="/user" component={User} />
       <Route exact path="/" component={Home} />
     </Switch>
   );
