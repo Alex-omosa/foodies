@@ -9,7 +9,7 @@ import Header from './header/Header';
 const useStyles = makeStyles((theme) => ({
   home: {
     paddingLeft: 50,
-    paddingTop: 70,
+    paddingTop: 50,
     paddingBottom: 40,
     height: '100vh',
   },
