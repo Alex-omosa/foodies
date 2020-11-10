@@ -1,6 +1,6 @@
 import React from 'react';
 //MUI
-import { makeStyles } from '@material-ui/core/Styles';
+import { makeStyles } from '@material-ui/core/styles';
 
 //FILES
 import Search from './Search';
