@@ -18,10 +18,10 @@ import SignUpForm from './forms/SignUpForm';
 const useStyles = makeStyles((theme) => ({
   authContainer: {
     backgroundColor: '#f2f2f2',
-    minHeight: '100vh',
+    height: '100vh',
   },
   authHero: {
-    height: '40vh',
+    height: '30vh',
     backgroundColor: '#ffff',
     borderBottomLeftRadius: 30,
     borderBottomRightRadius: 30,
@@ -38,7 +38,7 @@ const useStyles = makeStyles((theme) => ({
   },
   img: {
     // height: 40,
-    marginBottom: 40,
+    width: '20vw',
   },
   link: {
     textDecoration: 'none',
@@ -55,13 +55,15 @@ const useStyles = makeStyles((theme) => ({
   imgLink: {
     display: 'flex',
     justifyContent: 'center',
+    alignSelf: 'center',
     alignContent: 'center',
-    width: 'auto',
+    width: '40vw',
     height: 'auto',
+    marginBottom: 60,
   },
   formsContainer: {
-    minHeight: '60vh',
-    minWidth: '100vw',
+    height: '70vh',
+    width: '90vw',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',

@@ -1,5 +1,5 @@
 import React from 'react';
-import AuthRoutes from './auth/Routes';
+import AuthRoutes from './../containers/auth/Routes';
 
 function User() {
   return (

@@ -1,28 +1,17 @@
 import reactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
+import { ThemeProvider } from '@material-ui/core/styles';
+//FILES
 import App from './App';
+import theme from './theme/Theme';
 
-const theme = createMuiTheme({
-  palette: {
-    primary: {
-      main: '#FA4A0C',
-    },
-    secondary: {
-      main: '#BADASS',
-    },
-  },
-});
-
-setTimeout(() => {
-  reactDOM.render(
-    <BrowserRouter>
-      <CssBaseline />
-      <ThemeProvider theme={theme}>
-        <App />
-      </ThemeProvider>
-    </BrowserRouter>,
-    document.getElementById('root')
-  );
-}, 1000);
+reactDOM.render(
+  <BrowserRouter>
+    <CssBaseline />
+    <ThemeProvider theme={theme}>
+      <App />
+    </ThemeProvider>
+  </BrowserRouter>,
+  document.getElementById('root')
+);
