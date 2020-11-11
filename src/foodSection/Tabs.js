@@ -9,6 +9,7 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
     width: '100%',
     backgroundColor: theme.palette.background.paper,
+    boxShadow: '0 0 0 0 rgba(0, 0, 0, 0)',
   },
 }));
 
@@ -21,9 +22,9 @@ function a11yProps(index) {
 
 function SlidingTabs({ handleChange, value, items }) {
   const classes = useStyles();
-
+  console.log(items);
   return (
-    <AppBar position="static" color="default">
+    <AppBar className={classes.root} position="static" color="default">
       <Tabs
         value={value}
         onChange={handleChange}

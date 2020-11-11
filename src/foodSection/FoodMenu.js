@@ -4,20 +4,7 @@ import { makeStyles, useTheme } from '@material-ui/core/styles';
 import TabPanel from './TabPanel';
 import SlidingTabs from './Tabs';
 //DUMMYD_DATA
-const items = [
-  {
-    label: 'Foods',
-    text: '1',
-  },
-  {
-    label: 'Drinks',
-    text: '2',
-  },
-  {
-    label: 'Fruits',
-    text: '3',
-  },
-];
+import data from './../api/data';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -35,11 +22,15 @@ export default function ScrollableTabsButtonAuto() {
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
-
+  console.log(data);
   return (
     <div className={classes.root}>
-      <SlidingTabs handleChange={handleChange} value={value} items={items} />
-      <TabPanel index={value} value={value} items={items} />
+      <SlidingTabs handleChange={handleChange} value={value} items={data} />
+
+      <TabPanel index={value} value={value} data={data[value]} />
     </div>
   );
 }
+/**
+ * <TabPanel index={value} value={value} items={data} />
+ */

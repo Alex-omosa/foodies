@@ -1,7 +1,8 @@
 import React from 'react';
 
-function FoodCard({ children }) {
-  return <div>{children}</div>;
+function FoodCard({ food }) {
+  console.log(food);
+  return <div>{food.name}</div>;
 }
 
 export default FoodCard;
