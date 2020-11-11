@@ -22,7 +22,6 @@ function a11yProps(index) {
 
 function SlidingTabs({ handleChange, value, items }) {
   const classes = useStyles();
-  console.log(items);
   return (
     <AppBar className={classes.root} position="static" color="default">
       <Tabs
