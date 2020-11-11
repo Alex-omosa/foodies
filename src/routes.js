@@ -6,7 +6,6 @@ import Profile from './containers/profile/Profile';
 import PageNotFound from './containers/404/PageNotFound';
 
 function Routes() {
-  console.log(useHistory());
   return (
     <Switch>
       <Route exact path="/cart" component={Cart} />

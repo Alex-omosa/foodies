@@ -10,7 +10,7 @@ const useStyles = makeStyles((theme) => ({
     maxHeight: '100%',
     minHeight: '100%',
     overflow: 'hidden',
-    paddingBottom: 10,
+    paddingBottom: 0,
   },
 }));
 function App() {
