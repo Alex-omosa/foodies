@@ -1,5 +1,5 @@
 import React from 'react';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 //FILES
 import TabPanel from './TabPanel';
 import SlidingTabs from './Tabs';
@@ -16,7 +16,6 @@ const useStyles = makeStyles((theme) => ({
 
 export default function ScrollableTabsButtonAuto() {
   const classes = useStyles();
-  const theme = useTheme();
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
