@@ -9,6 +9,7 @@ const useStyles = makeStyles((theme) => ({
     marginRight: 50,
     display: 'flex',
     justifyContent: 'space-between',
+    paddingLeft: 50,
   },
 }));
 

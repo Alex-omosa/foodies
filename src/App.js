@@ -6,7 +6,11 @@ import BottomNav from './bottomNav/BottomNav';
 
 const useStyles = makeStyles((theme) => ({
   app: {
-    minHeight: '100vh',
+    height: '100%',
+    maxHeight: '100%',
+    minHeight: '100%',
+    overflow: 'hidden',
+    paddingBottom: 40,
   },
 }));
 function App() {

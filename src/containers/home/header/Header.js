@@ -9,6 +9,7 @@ const useStyles = makeStyles((theme) => ({
   homeHeader: {
     marginTop: 40,
     marginRight: 50,
+    paddingLeft: 50,
   },
 }));
 function Header() {

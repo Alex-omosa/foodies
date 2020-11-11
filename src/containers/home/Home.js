@@ -5,13 +5,12 @@ import { makeStyles } from '@material-ui/core/styles';
 //FILES
 import NavBar from './NavBar';
 import Header from './header/Header';
+import FoodSection from './../../foodSection/FoodSection';
 
 const useStyles = makeStyles((theme) => ({
   home: {
-    paddingLeft: 50,
     paddingTop: 50,
-    paddingBottom: 40,
-    height: '100vh',
+    height: '100%',
   },
 }));
 function Home() {
@@ -20,6 +19,7 @@ function Home() {
     <div className={classes.home}>
       <NavBar />
       <Header />
+      <FoodSection />
     </div>
   );
 }
