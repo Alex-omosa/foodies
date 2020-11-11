@@ -1,4 +1,4 @@
-import { Switch, Route, useHistory } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 import User from './user/User';
 import Home from './containers/home/Home';
 import Cart from './containers/cart/Cart';

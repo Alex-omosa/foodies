@@ -9,28 +9,23 @@ const useStyles = makeStyles((theme) => ({
   foodCardsContainer: {
     paddingTop: 14,
     paddingBottom: 14,
+    display: 'flex',
   },
 }));
 
 function TabPanel({ data, index, value }) {
   const classes = useStyles();
-  console.log(data.foods);
+
   return (
-    <div className={classes.foodCardsContainer}>
-      <div
-        role="tabpanel"
-        hidden={value !== index}
-        id={`scrollable-auto-tabpanel-${index}`}
-        aria-labelledby={`scrollable-auto-tab-${index}`}
-      >
-        {value === index && (
-          <div>
-            {data.foods.map((food, i) => (
-              <FoodCard key={i} food={food} />
-            ))}
-          </div>
-        )}
-      </div>
+    <div
+      className={classes.foodCardsContainer}
+      role="tabpanel"
+      hidden={value !== index}
+      id={`scrollable-auto-tabpanel-${index}`}
+      aria-labelledby={`scrollable-auto-tab-${index}`}
+    >
+      {value === index &&
+        data.foods.map((food, i) => <FoodCard key={i} food={food} />)}
     </div>
   );
 }
